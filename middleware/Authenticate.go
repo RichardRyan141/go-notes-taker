@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"gin-gorm-clean-template/common"
-	"gin-gorm-clean-template/service"
+	"go-notes-taker/common"
+	"go-notes-taker/service"
 	"net/http"
 	"strings"
 

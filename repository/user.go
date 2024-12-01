@@ -2,7 +2,7 @@ package repository
 
 import (
 	"context"
-	"gin-gorm-clean-template/entity"
+	"go-notes-taker/entity"
 
 	"github.com/google/uuid"
 	"gorm.io/gorm"

@@ -1,10 +1,10 @@
 package controller
 
 import (
-	"gin-gorm-clean-template/common"
-	"gin-gorm-clean-template/dto"
-	"gin-gorm-clean-template/entity"
-	"gin-gorm-clean-template/service"
+	"go-notes-taker/common"
+	"go-notes-taker/dto"
+	"go-notes-taker/entity"
+	"go-notes-taker/service"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

@@ -1,7 +1,7 @@
 package common
 
 import (
-	"gin-gorm-clean-template/entity"
+	"go-notes-taker/entity"
 	"math"
 
 	"gorm.io/gorm"

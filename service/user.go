@@ -2,10 +2,10 @@ package service
 
 import (
 	"context"
-	"gin-gorm-clean-template/dto"
-	"gin-gorm-clean-template/entity"
-	"gin-gorm-clean-template/helpers"
-	"gin-gorm-clean-template/repository"
+	"go-notes-taker/dto"
+	"go-notes-taker/entity"
+	"go-notes-taker/helpers"
+	"go-notes-taker/repository"
 
 	"github.com/google/uuid"
 	"github.com/mashingan/smapping"

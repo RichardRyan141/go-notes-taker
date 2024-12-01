@@ -1,4 +1,4 @@
-module gin-gorm-clean-template
+module go-notes-taker
 
 go 1.20
 

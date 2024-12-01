@@ -2,21 +2,27 @@ package config
 
 import (
 	"fmt"
-	"gin-gorm-clean-template/entity"
-	"os"
+	"go-notes-taker/entity"
+	"go-notes-taker/helpers"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
 func SetupDatabaseConnection() *gorm.DB {
-	dbUser := os.Getenv("DB_USER")
-	dbPass := os.Getenv("DB_PASS")
-	dbHost := os.Getenv("DB_HOST")
-	dbName := os.Getenv("DB_NAME")
-	dbPort := os.Getenv("DB_PORT")
+	dbUser := helpers.MustGetenv("DB_USER")
+	dbPass := helpers.MustGetenv("DB_PASS")
+	dbHost := helpers.MustGetenv("DB_HOST")
+	dbName := helpers.MustGetenv("DB_NAME")
+	dbPort := helpers.MustGetenvInt("DB_PORT")
 
-	dsn := fmt.Sprintf("host=%v user=%v password=%v dbname=%v port=%v TimeZone=Asia/Jakarta", dbHost, dbUser, dbPass, dbName, dbPort)
+	fmt.Println(dbUser)
+	fmt.Println(dbPass)
+	fmt.Println(dbHost)
+	fmt.Println(dbName)
+	fmt.Println(dbPort)
+
+	dsn := fmt.Sprintf("TimeZone=Asia/Jakarta host=%v user=%v password=%v dbname=%v port=%v", dbHost, dbUser, dbPass, dbName, dbPort)
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		fmt.Println(err)
